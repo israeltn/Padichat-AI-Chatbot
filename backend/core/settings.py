@@ -6,8 +6,9 @@ from dotenv import load_dotenv
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Load environment variables from .env file in the 'env' directory
-env_path = BASE_DIR / 'env' / '.env.local'
-load_dotenv(dotenv_path=env_path)
+# env_path = BASE_DIR / 'env' / '.env.local'
+# load_dotenv(dotenv_path=env_path)
+load_dotenv('env/.env.local')
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG') == 'True'
@@ -88,14 +89,16 @@ WSGI_APPLICATION = "core.wsgi.application"
 # }
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.getenv("POSTGRES_DB", "dev_db"),
-        "USER": os.getenv("POSTGRES_USER", "dev_user"),
-        "PASSWORD": os.getenv("POSTGRES_PASSWORD", "dev_password"),
-        "HOST": os.getenv("POSTGRES_HOST", "db"),  # Ensure 'db' matches the Docker service name
-        "PORT": os.getenv("POSTGRES_PORT", "5432"),
-    }
+     'default': {
+         'ENGINE': 'django.db.backends.{}'.format(
+             os.getenv('DATABASE_ENGINE', 'sqlite3')
+         ),
+         'NAME': os.getenv('DATABASE_NAME', 'polls'),
+         'USER': os.getenv('DATABASE_USERNAME', 'myprojectuser'),
+         'PASSWORD': os.getenv('DATABASE_PASSWORD', 'password'),
+         'HOST': os.getenv('DATABASE_HOST', '127.0.0.1'),
+         'PORT': os.getenv('DATABASE_PORT', 5432),
+     }
 }
 
 
