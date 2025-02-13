@@ -2,7 +2,7 @@
 # Padichat-AI-Chatbot
 PadiChat is an innovative AI-powered chatbot designed to engage the Nigerian youth providing Sexual Reproductive Health and Rights (SRHR) information and counseling.
 
->>>>>>> e1fa36b0dcd445c82df6385b96e457281fa0ae2a
+
 # 🚀 Django + Celery + Redis + PostgreSQL + Next.js (TypeScript + Tailwind) - Dockerized Setup
 
 This repository provides a fully **Dockerized** setup for a **Django backend** with **Celery, Redis, PostgreSQL**, and a **Next.js frontend (TypeScript + TailwindCSS)**.
