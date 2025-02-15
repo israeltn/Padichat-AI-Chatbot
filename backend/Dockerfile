@@ -1,19 +1,35 @@
 # Development
-FROM python:3.11-slim AS development
-WORKDIR /app
-# Set environment variables to optimize Python
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+FROM python:3.9-slim-bullseye AS development
 
-# Install dependencies
-RUN pip install --upgrade pip
-COPY requirements.txt /app/
-RUN pip install --no-cache-dir -r requirements.txt
+
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONDONTWRITEBYTECODE 1
+
+WORKDIR /app
+
+COPY . /app/
+
+RUN apt-get update 
+
+COPY ./requirements.txt .
+
+# Install system dependencies
+RUN pip install -r requirements.txt
+
+# WORKDIR /app
+# # Set environment variables to optimize Python
+# ENV PYTHONDONTWRITEBYTECODE 1
+# ENV PYTHONUNBUFFERED 1
+
+# # Install dependencies
+# RUN pip install --upgrade pip
+# COPY requirements.txt /app/
+# RUN pip install --no-cache-dir -r requirements.txt
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 
 
 # Production
-FROM python:3.11-slim AS production
+FROM python:3.10 AS production
 RUN useradd -m -r appuser && \
     mkdir /app && \
     chown -R appuser /app

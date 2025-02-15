@@ -3,25 +3,26 @@
 services:
   db:
     restart: always
-    image: postgres:13    
+    image: postgres:13-alpine3.21
+    container_name: db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: padichat_db
     ports:
-      - "5432:5432"
+      - "5431:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
-    environment:
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      POSTGRES_DB: ${POSTGRES_DB}
    
 
   redis:
-    image: redis:6
+    image: redis:7.2.7-alpine
     restart: always
     ports:
-      - "6379:6379"
+      - "7379:7379"
 
   backend:
-    build:
+    build: 
       context: ./backend
       target: development
     command: >
@@ -40,7 +41,7 @@ services:
 
   frontend:
     build:
-      context: ./frontend
+      context: ./frontend    
       target: development
     command: npm run dev
     volumes:
@@ -66,10 +67,10 @@ services:
     depends_on:
       - db
       - redis
-  #adminer:
-        #image: adminer
-        #restart: always      
-        #ports:
-          #- "8080:80"
+  adminer:
+        image: adminer
+        restart: always      
+        ports:
+          - "8080:8080"
 volumes:
   postgres_data:
