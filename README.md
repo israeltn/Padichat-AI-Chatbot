@@ -87,6 +87,8 @@ To stop the containers:
 
 ```sh
 docker-compose -f docker-compose.dev.yml down
+or 
+docker-compose -f docker-compose.dev.yml up -d --build
 ```
 
 ### 🔹 Production Mode
