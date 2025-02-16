@@ -6,7 +6,7 @@ services:
     image: postgres:13   
     container_name: db
     ports:
-      - '5432:5432'
+      - '5431:5432'
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
@@ -35,12 +35,13 @@ services:
       - ./backend:/app
     ports:
       - "8000:8000"
-   
-    environment:
-      - POSTGRES_HOST=db     
-      - POSTGRES_NAME=padichat_db
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+    env_file:
+      - ./backend/env/.env.local 
+    # environment:
+    #   - POSTGRES_HOST=db     
+    #   - POSTGRES_NAME=padichat_db
+    #   - POSTGRES_USER=postgres
+    #   - POSTGRES_PASSWORD=postgres
    
     depends_on:
       - db
