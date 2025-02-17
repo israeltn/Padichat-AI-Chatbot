@@ -87,7 +87,7 @@ DATABASES = {
          ),
         'USER': os.environ.get('POSTGRES_USER'),
         'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
-        'HOST': os.environ.get('POSTGRES_HOST', 'db'),  # Use the service name 'db'
+        'HOST': os.environ.get('POSTGRES_HOST'),  # Use the service name 'db'
         'PORT': os.environ.get('POSTGRES_PORT'),
         'NAME': os.environ.get('POSTGRES_NAME', ),
 
