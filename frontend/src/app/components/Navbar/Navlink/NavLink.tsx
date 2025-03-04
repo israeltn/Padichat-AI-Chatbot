@@ -9,7 +9,7 @@ type NavList = [
 const NavLinks = => () {
     const navList = {}
     return (
-        <div></div>
+        <div>giuy</div>
     )
 }
 export default NavLinks
