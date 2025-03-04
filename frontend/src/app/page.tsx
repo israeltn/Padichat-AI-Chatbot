@@ -2,8 +2,8 @@
 
 export default function Home() {
   return (
-  <div>
-    we don start
-  </div>
+    <div className="happy">
+      we don star
+    </div>
   );
 }
