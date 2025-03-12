@@ -1,8 +1,14 @@
 @import "tailwindcss";
 @tailwind utilities;
 @plugin "tailwindcss-animate";
-/* @custom-variant dark (&:is(.dark *)); */
-@theme inline {
+
+ /* @custom-variant dark (&:is(.dark *)); */
+
+ @theme inline {
+  --primary: #FF7251;
+  --secondary: #FF9E63;
+  --tertiary: #FF6F61;
+  --accent: #FFFAF2;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -41,10 +47,9 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --primary: #ff7251;
-  --secondary: #ff9e63;
-  --tertiary: #ff6f61;
-  --cream: #fffaf2;
+
+  
+  
 }
 /* 
 :root {
@@ -81,7 +86,11 @@
   --sidebar-accent-foreground: #FF7251;
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+
+  
 }  */
+
 /* .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -116,6 +125,7 @@
   --sidebar-border: oklch(0.269 0 0);
   --sidebar-ring: oklch(0.439 0 0);
 }  */
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -124,11 +134,29 @@
     @apply bg-background text-foreground;
   }
 }
-@theme {
+
+@theme{
+ 
 }
-/* 
+
 @layer utilities{
-  .btn-text {
-    @apply bg-gradient-to-r from-primary to-secondary to-tertiary;
+  .app-container {
+    @apply flex flex-col max-w-[1247px] mx-auto overflow-hidden px-[25px] lg:px-0;
   }
-} */
+
+  .pc-only{
+    @apply sm:hidden;
+    /* @apply md:hidden;
+    @apply sm:hidden; */
+    /* @apply xs:hidden; */
+  }
+
+  .mobile-only{
+    
+    /* @apply xs:block; */
+  }
+}
+
+.bg-custom {
+  background-image: url('/images/hero.png');
+}
