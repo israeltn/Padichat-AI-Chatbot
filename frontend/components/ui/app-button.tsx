@@ -5,7 +5,7 @@ export const PrimaryButton = ({ href, children }: {
     children: React.ReactNode
 }) => {
     return (
-        <Link href={href} className="bg-coral rounded-[6px] text-white py-4 px-8">{children}</Link>
+        <Link href={href} className="bg-primary rounded-[6px] text-white font-semibold text-sm py-1 px-2 md:py-2 md:px-4">{children}</Link>
     )
 }
 
@@ -14,6 +14,6 @@ export const SecondaryButton = ({ href, children }: {
     children: React.ReactNode
 }) => {
     return (
-        <Link href={href} className="bg-white rounded-[6px] text-black py-4 px-8">{children}</Link>
+        <Link href={href} className="bg-white rounded-[6px] text-black font-semibold text-sm py-1 px-2 md:py-2 md:px-4">{children}</Link>
     )
 }

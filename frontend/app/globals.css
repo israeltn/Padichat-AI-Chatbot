@@ -5,9 +5,9 @@
  /* @custom-variant dark (&:is(.dark *)); */
 
  @theme inline {
-  --primary: #FF7251;
+  --primary: #FF6F61;
   --secondary: #FF9E63;
-  --tertiary: #FF6F61;
+  --accent-foreground: rgba(245, 218, 175, 0.40);
   --accent: #FFFAF2;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -144,19 +144,11 @@
     @apply flex flex-col max-w-[1247px] mx-auto overflow-hidden px-[25px] lg:px-0;
   }
 
-  .pc-only{
-    @apply sm:hidden;
-    /* @apply md:hidden;
-    @apply sm:hidden; */
-    /* @apply xs:hidden; */
+  /* .gradient-text {
+    @apply bg-linear-[270deg, secondary_28% primary_65%]  bg-clip-text text-transparent;
+  } */
+  .gradient-text {
+    @apply bg-gradient-to-l from-[#ffd966] from-0% via-secondary via-28% to-primary to-65% bg-clip-text text-transparent ;
   }
 
-  .mobile-only{
-    
-    /* @apply xs:block; */
-  }
-}
-
-.bg-custom {
-  background-image: url('/images/hero.png');
 }
