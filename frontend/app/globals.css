@@ -2,13 +2,13 @@
 @tailwind utilities;
 @plugin "tailwindcss-animate";
 
- /* @custom-variant dark (&:is(.dark *)); */
+/* @custom-variant dark (&:is(.dark *)); */
 
- @theme inline {
-  --primary: #FF7251;
-  --secondary: #FF9E63;
-  --tertiary: #FF6F61;
-  --accent: #FFFAF2;
+@theme inline {
+  --primary: #ff7251;
+  --secondary: #ff9e63;
+  --tertiary: #ff6f61;
+  --accent: #fffaf2;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -47,9 +47,6 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-
-  
-  
 }
 /* 
 :root {
@@ -135,28 +132,26 @@
   }
 }
 
-@theme{
- 
+@theme {
 }
 
-@layer utilities{
+@layer utilities {
   .app-container {
     @apply flex flex-col max-w-[1247px] mx-auto overflow-hidden px-[25px] lg:px-0;
   }
 
-  .pc-only{
+  .pc-only {
     @apply sm:hidden;
     /* @apply md:hidden;
     @apply sm:hidden; */
     /* @apply xs:hidden; */
   }
 
-  .mobile-only{
-    
+  .mobile-only {
     /* @apply xs:block; */
   }
 }
 
 .bg-custom {
-  background-image: url('/images/hero.png');
+  background-image: url("/images/hero.png");
 }

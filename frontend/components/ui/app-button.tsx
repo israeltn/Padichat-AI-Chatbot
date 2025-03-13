@@ -1,11 +1,11 @@
-import React from 'react';
+// import React from 'react';
 
-const appButton = ({color}) => {
-    return (
-        <div>
+// const appButton = ({color}) => {
+//     return (
+//         <div>
             
-        </div>
-    );
-};
+//         </div>
+//     );
+// };
 
-export default appButton;
+// export default appButton;
