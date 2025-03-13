@@ -1,4 +1,4 @@
-import NavBar from "@/app/ui/components/navbar/Nav/NavBar";
+import NavBar from "@/app/ui/components/navbar/NavBar";
 
 const HomeLayout = ({
     children,

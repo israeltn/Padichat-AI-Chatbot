@@ -2,19 +2,19 @@ import Link from "next/link"
 const navItems = [
     {
         name: "Our Partners",
-        link: "/our-partners"
+        link: "/#our-partners"
     },
     {
         name: "Features",
-        link: "/features"
+        link: "/#features"
     },
     {
         name: "About PadiChat",
-        link: "/about-padichat"
+        link: "/#about-padichat"
     },
     {
         name: "Contact Us",
-        link: "/contact-us"
+        link: "/#contact-us"
     },
 ]
 const NavLinks = () => {
