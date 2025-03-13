@@ -1,11 +1,19 @@
-import React from 'react';
+import Link from 'next/link'
 
-const appButton = ({color}) => {
+export const PrimaryButton = ({ href, children }: {
+    href: string
+    children: React.ReactNode
+}) => {
     return (
-        <div>
-            
-        </div>
-    );
-};
+        <Link href={href} className="bg-coral rounded-[6px] text-white py-4 px-8">{children}</Link>
+    )
+}
 
-export default appButton;
+export const SecondaryButton = ({ href, children }: {
+    href: string
+    children: React.ReactNode
+}) => {
+    return (
+        <Link href={href} className="bg-white rounded-[6px] text-black py-4 px-8">{children}</Link>
+    )
+}
