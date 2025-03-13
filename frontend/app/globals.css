@@ -1,14 +1,19 @@
 @import "tailwindcss";
 @tailwind utilities;
 @plugin "tailwindcss-animate";
-
 /* @custom-variant dark (&:is(.dark *)); */
-
-@theme inline {
+@theme {
   --primary: #ff7251;
   --secondary: #ff9e63;
   --tertiary: #ff6f61;
   --accent: #fffaf2;
+  --color-coral: #ff6f61;
+  --color-gradient: linear-gradient(
+    270deg,
+    rgba(255, 217, 102, 1) 0%,
+    rgba(255, 158, 99, 1) 28%,
+    rgba(255, 111, 97, 1) 64%
+  );
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -83,11 +88,7 @@
   --sidebar-accent-foreground: #FF7251;
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-
-
-  
 }  */
-
 /* .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -122,7 +123,6 @@
   --sidebar-border: oklch(0.269 0 0);
   --sidebar-ring: oklch(0.439 0 0);
 }  */
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -131,16 +131,23 @@
     @apply bg-background text-foreground;
   }
 }
-
-@theme {
-}
-
+/* @theme {
+} */
 @layer utilities {
   .text-defaults {
     @apply sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl;
   }
 }
-
 .bg-custom {
   background-image: url("/images/hero.png");
 }
+/* 
+@theme {
+  --coral: #ff6f61;
+  --gradient: linear-gradient(
+    270deg,
+    rgba(255, 217, 102, 1) 0%,
+    rgba(255, 158, 99, 1) 28%,
+    rgba(255, 111, 97, 1) 64%
+  );
+} */

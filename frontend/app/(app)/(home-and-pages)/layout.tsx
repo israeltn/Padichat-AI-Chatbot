@@ -1,4 +1,4 @@
-import NavBar from "@/components/navbar/NavBar";
+import NavBar from "@/app/ui/components/navbar/Nav/NavBar";
 
 const HomeLayout = ({
     children,
@@ -6,10 +6,10 @@ const HomeLayout = ({
     children: React.ReactNode;
 }>) => {
     return (
-        <div>
+        <header className="w-full">
             <NavBar />
             {children}
-        </div>
+        </header>
     )
 }
 export default HomeLayout
