@@ -47,7 +47,7 @@ const NavItemList = () => {
                     </SecondaryButton>
                 </span>
 
-                <PrimaryButton href="/register">
+                <PrimaryButton href="/signup">
                     Get Started Now
                 </PrimaryButton>
 
