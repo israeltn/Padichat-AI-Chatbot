@@ -136,19 +136,8 @@
 }
 
 @layer utilities {
-  .app-container {
-    @apply flex flex-col max-w-[1247px] mx-auto overflow-hidden px-[25px] lg:px-0;
-  }
-
-  .pc-only {
-    @apply sm:hidden;
-    /* @apply md:hidden;
-    @apply sm:hidden; */
-    /* @apply xs:hidden; */
-  }
-
-  .mobile-only {
-    /* @apply xs:block; */
+  .text-defaults {
+    @apply sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl;
   }
 }
 
