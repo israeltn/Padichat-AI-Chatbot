@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { lato } from "./fonts";
+import { lato } from "../Osas-app/(app)/ui/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
