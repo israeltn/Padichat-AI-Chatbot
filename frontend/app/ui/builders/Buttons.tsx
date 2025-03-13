@@ -4,6 +4,6 @@ export const PrimaryButton = ({ href, children }: {
     children: React.ReactNode
 }) => {
     return (
-        <Link href={href} className="bg-coral rounded-lg text-white py-4 px-8">{children}</Link>
+        <Link href={href} className="bg-coral rounded-[6px] text-white py-4 px-8">{children}</Link>
     )
 }
